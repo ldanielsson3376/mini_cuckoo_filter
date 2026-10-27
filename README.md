@@ -48,3 +48,10 @@ else".
   `remove`, `contains` (alias for `__contains__`), `__contains__`, `__len__`,
   `capacity`, `load_factor`, and iteration over fingerprints.
 * `FilterFull` — raised by `add` when eviction fails.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
