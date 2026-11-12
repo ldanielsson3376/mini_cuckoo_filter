@@ -1,6 +1,6 @@
 [project]
 name = "mini-cuckoo-filter"
-version = "0.1.0"
+version = "0.1.1"
 description = "A minimal Cuckoo filter with no dependencies for set-membership testing that supports deletions"
 requires-python = ">=3.10"
 dependencies = []
